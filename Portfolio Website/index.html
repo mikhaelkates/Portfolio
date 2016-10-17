@@ -2,10 +2,131 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!--JQuery, AngularJS, and Bootstrap CDN's-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css"/>
+    <script src="main.js"></script>
     <meta charset="utf-8" />
-    <title></title>
+    <title>My Portfolio Website</title>
 </head>
 <body>
-    <div>Hello World</div>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#home">Mikhael Kates</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron text-center" id="home">
+            <h1>Mikhael Kates, Web Developer</h1>
+            <p>Ingredients: Caffeine, Pizza, Classical Music. <br />Result: Code.</p>
+
+        </div>
+
+
+        <div class="container-fluid slideanim" id="about">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>About Me</h2>
+                    <h4>Level 11 Code-Wizard</h4>
+                    <p>I've worked on web development projects ranging from simple HTML/CSS edits to full blown full-stack implementations. There's no project too complex and no concept too big for my caffeine addiction.</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-menu-left logo"></span>
+                    <span class="glyphicon glyphicon-menu-right logo"></span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container-fluid text-center bg-grey slideanim" id="projects">
+            <h2>Portfolio</h2>
+            <h4>Professional &amp; Personal Work</h4>
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <a href=""><img src="" alt=""></a>
+                        <p><a href="">The Repair Depot</a></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <a href=""><img src="" alt=""></a>
+                        <p></p>
+                        <p><a href="">Kinesio Balance</a></p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <a href="https://codepen.io/mikhaelkates/full/yJyaYB/"><img src="" alt=""></a>
+                        <p></p>
+                        <p><a href="https://codepen.io/mikhaelkates/full/yJyaYB/">Weather App</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid slideanim" id="contact">
+            <h2 class="text-center">CONTACT</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>If you have code that crashes or bugs in your GUI, I'd be more than happy to hear from you! Contact me in whatever method you choose, or seek me out on my social media pages.</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Stillwater, OK</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> (405) 780-0538</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span> mikhaelkates@yahoo.com</p>
+                    <span class="social"><a href="https://www.facebook.com/M1KH43L" target="_blank"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a></span>
+                    <span class="social"><a href="https://www.linkedin.com/in/mikhael-kates-981313a5" target="_blank"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></span>
+                    <span class="social"><a href="https://github.com/mikhaelkates" target="_blank"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a></span>
+
+                </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br />
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="container-fluid text-center">
+            <a href="#home" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <p>Copyright 2016 by Mikhael Kates</p>
+        </footer>
+    </body>
 </body>
 </html>
