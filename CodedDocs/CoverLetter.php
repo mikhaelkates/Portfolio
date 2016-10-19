@@ -4,42 +4,48 @@ $myName = "Mikhael Kates";
 $myPhone = "405-780-0538";
 $myEmail = "mikhaelkates@yahoo.com";
 $br = "<br />";
-$languageSkills = ["HTML5", "CSS3", "Javascript", "Javascript", "PHP", "MySQL", "C#"];
+$languageSkills = ["HTML5", "CSS3", "Javascript", "JQuery", "PHP", "MySQL", "C#"];
 $techinicalSkills = ["Sublime Text", "Visual Studio", "MySQL Workbench", "Adobe Creative"];
 $codeExperience = "1 year";
-$hobbies = ["In-Home Code-a-thons", "Star Wars", "Tabletop Games", "RPG DMing", "Magic: The Gathering"];
+$hobbies = ["Code-a-thons", "Star Wars", "Tabletop Games", "Magic: The Gathering"];
 	
 function greeting($br){
-	echo "Hello, Interworks!";
+	echo "Hello, InterWorks!";
+	echo $br.$br;
+	echo "I'm a dedicated nerd who is looking for the right company to join. I've heard great things about you, 
+and I hope you will take the time to get to know me.";
 	echo $br;
-	echo "I'm going to show you why you should hire me!";
-	echo $br.$br;
 }
-function showIFit($br, $hobbies){
-	echo "By this point, I hope you've looked through my resume. If not, I'll give you a few minutes to peruse it.";
-	echo $br.$br;
-	echo "All done? Good? Good! Now, I'd like to explain a few of the reasons why I'm your ideal candidate.";
+function showIFit($br, $hobbies, $languageSkills){
+	
+	echo "If my nerd credentials were not already obvious from my cover letter, I hold ".$hobbies[0]." at my house";
+	echo $br;
+	echo "a few times a month. We mostly focus on ".$languageSkills[2].", ".$languageSkills[4].", and other front end development, but we have been";
+	echo $br;
+	echo "branching off into other areas such as ".$languageSkills[6].". ";
 	echo $br.$br;	
-	echo "Starting with my ".$hobbies[0].". It's a small gathering, but I get a couple friends together once or twice a month and we code for a few hours at a time.";
-		
-	echo "We mostly focus on Javascript and Front-End technologies, but we've started braching off into Back-End, and even desktop languages like C#";
-	echo $br.$br;
-	echo "I also often host ".$hobbies[2]." at my house on weekends. Regardless of my workplace, I always seem to find several people who enjoy playing board and card games, and my collection is extensive.";
-		
+	echo "When I am not working, I enjoy ".$hobbies[2]." with my family and friends. I have an extensive board";
+	echo $br;
+	echo "game collection, and I am known to be a great (or frightening) DM, depending on how you roll.";
 	echo $br.$br;
 }
-function contactMe($codeExperience, $br, $myPhone, $myEmail){
-	echo "At the present time, I have ".$codeExperience." of experience as a developer, and am looking forward to adding several more with Interworks";
+function contactMe($codeExperience, $br, $myPhone, $myEmail, $myName){
+	echo "At the present time I have ".$codeExperience." of experience working as a developer, and I hope future years can be gained with you.";
+	echo $br.$br;
+	echo "I look forward to hearing from you.";
+	echo $br.$br;
+	echo $myName;
 	echo $br;
-	echo "You may contact me either by phone, at:".$myPhone."; Or by email, at:".$myEmail.".";
+	echo $myPhone;
 	echo $br;
-	echo "I look forward to hearing back from you soon!";
+	echo $myEmail;
+
 }
-function buildCoverLetter($codeExperience, $br, $myPhone, $myEmail, $hobbies){
+function buildCoverLetter($codeExperience, $br, $myPhone, $myEmail, $hobbies, $myName, $languageSkills){
 	greeting($br);
-	showIFit($br, $hobbies);
-	contactMe($codeExperience, $br, $myPhone, $myEmail);
+	showIFit($br, $hobbies, $languageSkills);
+	contactMe($codeExperience, $br, $myPhone, $myEmail, $myName);
 }
-buildCoverLetter($codeExperience, $br, $myPhone, $myEmail, $hobbies);
+buildCoverLetter($codeExperience, $br, $myPhone, $myEmail, $hobbies, $languageSkills, $myName);
 
 ?>
